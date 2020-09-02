@@ -1,7 +1,0 @@
-I am a total beginner with GUI and Command Line Interface. 
-After watching the brief videos about them both, my preference right now is for GUI. 
-It is what I’m used to since Windows and Apple use it. I’ve never used Command Line Interface before now, but I’m excited to learn. 
-Right off the bat, it looks more challenging just because of its layout. 
-It actually reminds me a lot of the system I use at my job.
- I rent cars and the software we use was made in the 1980s and it strongly resembles the Command Line Interface. 
-The GUI is more visual and easier to follow since it doesn’t all look the same and blend together like the command line interface. 
