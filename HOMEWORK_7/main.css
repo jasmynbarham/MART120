@@ -1,0 +1,16 @@
+div {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: cornflowerblue;
+}
+
+.myClass {
+    font-size: large;
+    font-family: 'Times New Roman', Times, serif;
+    color: darkgoldenrod;
+}
+
+#myID {
+    font-weight: bold;
+    font-family: fantasy;
+    color: darkslategray;
+}
