@@ -6,14 +6,15 @@
         var actualAnswer;
         var number1;
         var number2;
-        var correctAnswers;
+        
+     
             var correctAnswers = 0;
-        var incorrectAnswers;
+     
             var incorrectAnswers = 0;
-        var questionsAsked;
+     
             var questionsAsked = 0
-        var questionsPerformed;
-            var questionsPerformed = 0;
+  
+            var totalQuestions = 10;
 
      
         function printQuestion() {
@@ -24,24 +25,35 @@
         }
 
         function checkAnswer() {
+     
+            questionsAsked++;
             var answer = document.getElementById("txtAnswer").value;
             if (answer == actualAnswer) {
-                document.getElementById("finalResult").innerHTML = "Good job! You answered " + answer + " you have " + (correctAnswers + 1) + " out of " + questionsAsked;
+                //increase number of questions performed//
+                correctAnswers++;
+                document.getElementById("finalResult").innerHTML = "Good job! You answered " + answer + " you have " + correctAnswers + " out of " + questionsAsked;
                 document.getElementById("txtAnswer").value = "";
-                //increase correct Answers variable//
-            
 
             } else {
+              
                 document.getElementById("finalResult").innerHTML = "Try Again! The correct answer is " + actualAnswer + " you have " + correctAnswers + " out of " + questionsAsked;
+               
+                incorrectAnswers++;              
             }
-            //increase incorrect answers variable//
-            //increase number of questions performed//
+            
             //if statement that asks if questionsPerformed is greater than questionsAsked//
-            //print out number of correct answers, number of incorrect answers and percentage (correct/total)//
-            //else, print question below//
-    
+            if(questionsAsked >= totalQuestions) {
+                document.getElementById("finalResult").innerHTML = "You got " + correctAnswers + " right and " + incorrectAnswers + " wrong. Your percentage is " + (correctAnswers/totalQuestions);
+            }
+            
+                //print out number of correct answers, number of incorrect answers and percentage (correct/total)//
+            
+            else
+            {
+                //else, print question below//
+                printQuestion();
+            }  
           
-            printQuestion();
             
         }
 

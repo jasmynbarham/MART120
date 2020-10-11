@@ -1,0 +1,57 @@
+<html>
+
+
+    <head>
+        <h1>Contact Us</h1><html>
+    </head>
+            <body>
+                
+        
+        <form action="nextPage.html" type="Post">
+            First Name: <input type="text" id="fName"><br>
+            Last Name: <input type="text" id="lName"><br>
+            Phone Number: <input type="text" id="pNumber"><br> 
+            <button id="mySubmit" type="submit" onclick = "checkForm();">Submit</button>
+        </form>
+        <form action="JasmynBarhamPage3.html" type="Post">
+            Email Address: <input type="text" id="email"><br>
+        <h3>Do You Accept the Terms of Agreement?</h3>
+            <input type="checkbox" name="Yes" value="Yes">Yes<br>
+            <input type="checkbox" name="No" value="No">No<br>
+<script>
+    function checkForm()
+        {
+            var name;
+            name = document.getElementById("fName").value;
+            if(name =="")
+            {
+                document.getElementById("fName").style.backgroundColor = "red";
+                document.getElementById("fName").focus();
+            }
+            else{
+                document.getElementById("fName").style.backgroundColor = "white";
+            }
+            var name;
+            name = document.getElementById("lName").value;
+            if(name =="")
+            {
+                document.getElementById("lName").style.backgroundColor = "red";
+                document.getElementById("lName").focus();
+            }
+            else{
+                doucment.getElementById("lName").style.backgroundColor = "white";
+            }
+        }
+</script>
+</body>
+
+</html>
+
+       
+
+
+
+
+
+
+
