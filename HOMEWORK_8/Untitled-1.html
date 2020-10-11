@@ -28,14 +28,20 @@
             if (answer == actualAnswer) {
                 document.getElementById("finalResult").innerHTML = "Good job! You answered " + answer + " you have " + (correctAnswers + 1) + " out of " + questionsAsked;
                 document.getElementById("txtAnswer").value = "";
-                printQuestion();
+                //increase correct Answers variable//
+            
 
             } else {
                 document.getElementById("finalResult").innerHTML = "Try Again! The correct answer is " + actualAnswer + " you have " + correctAnswers + " out of " + questionsAsked;
             }
+            //increase incorrect answers variable//
+            //increase number of questions performed//
+            //if statement that asks if questionsPerformed is greater than questionsAsked//
+            //print out number of correct answers, number of incorrect answers and percentage (correct/total)//
+            //else, print question below//
     
           
-            
+            printQuestion();
             
         }
 
