@@ -1,17 +1,27 @@
-var x = 170;
-var y = 30;
+var x = 188;
+var y = 60;
+
 var headX = 170;
 var headY = 65;
 var headDirection = 1;
+
 var bodyX = 130;
 var bodyY = 110;
-mouthY = 96
-mouthX = 170
-var bodyDirection = 3;
-var size = 22;
+
+var legX = 190;
+var legY = 325;
+
+mouthY = 96;
+mouthX = 170;
+
+var size = 20;
 var count = 0;
-var sizeDirection = 2;
-var movement = 5;
+var sizeDirection = 4;
+
+var movement = 2
+var movement2 = 3;
+var leftlegMovement = 3
+
 
 function setup() {
   createCanvas(400, 400);
@@ -36,7 +46,17 @@ function draw()
   //right eye
   circle(153,60,10);
   //left eye
-  circle(188,60,10);
+  circle(x,y,10);
+    if(x >= 400 && y >=400)
+    {
+       movement*=-1;
+    }
+    if(x <= 0 && y >= 0)
+    {
+        movement *= -1;
+    }
+     x += movement;
+    y += movement;
   fill(120,89,250);
   //body
   rect(bodyX,bodyY,80,160);
@@ -44,7 +64,7 @@ function draw()
   //right foot
   rect(108,378,50,10);
   //left foot
-  rect(184,378,50,10);
+  rect(184,378,50,10);  
   fill(10)
   //right ear
   ellipse(120,70,10,19);
@@ -53,9 +73,16 @@ function draw()
   //nose
   triangle(169,80,160,80,169,70);
   //right leg
-  ellipse(150,325,30,110);
+  ellipse(150,legY,30,110);
+    if(legY >= 400 || legY <= 0)
+    {
+       leftlegMovement *= -1;
+    }
+
+     legY += leftlegMovement;
+
   //left leg
-  ellipse(190,325,30,110)
+  ellipse(190,legY,30,110)  
   fill(250)
   //mouth
   ellipse(mouthX,mouthY,30,10)
@@ -83,13 +110,20 @@ function draw()
   line(140,52,120,52);
   line(200,52,220,52);
   //hair curls
-  ellipse(140,y,10,40);
-  ellipse(152,y,10,30);
-  ellipse(165,y,10,30);
-  ellipse(179,y,10,30);
-  ellipse(194,y,10,30);
-  ellipse(205,y,10,30);
-  textSize(45);
+  ellipse(140,30,10,40);
+  ellipse(152,30,10,30);
+  ellipse(165,30,10,30);
+  ellipse(179,30,10,30);
+  ellipse(194,30,10,30);
+  ellipse(205,30,10,30);
+  textSize(size);
+      size+= sizeDirection;
+    count++;
+    if(count > 5)
+    {
+        sizeDirection *=-1;
+        count = 0;
+    }
   text('Jasmyn Barham', 35, 390);
   textSize(20)
   text('A Self Portrait', 240,140)
@@ -103,8 +137,8 @@ function draw()
   
   if(mouthX >= 300 || mouthX <= 0)
   {
-    movement *= -1;
+    movement2 *= -1;
   }
-    mouthX += movement
+    mouthX += movement2
 
 }
