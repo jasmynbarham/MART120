@@ -12,7 +12,7 @@ var legX = 190;
 var legY = 325;
 
 mouthY = 96;
-mouthX = 170;
+mouthX = 170;   
 
 var size = 20;
 var count = 0;
